@@ -1,0 +1,4 @@
+echo "Installing required dependencies ... "
+sudo add-apt-repository ppa:ondrej/php5 -y
+sudo apt-get update
+sudo apt-get build-dep php5-cli autoconf bison build-essential curl flex libcurl3-openssl-dev libfreetype6-dev libjpeg62-dev libmcrypt-dev libpng-dev libtidy-dev libxml2-dev libxslt-dev re2c zlib1g-dev libreadline-dev -y
