@@ -1,0 +1,4 @@
+echo "Installing required dependencies ... "
+sudo add-apt-repository ppa:ondrej/php5 -y
+sudo apt-get update
+sudo apt-get build-dep php5-cli libreadline-dev re2c flex bison -y
