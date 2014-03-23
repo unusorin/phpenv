@@ -1,0 +1,28 @@
+export PHPENV_PROFILE="loaded"
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
+cd () {
+	builtin cd "$@"
+    detectVirtPHP $(pwd)
+}
+
+function detectVirtPHP {
+    if [ -r $1/*/.virtphp ];
+    then
+    	if [ "$VIRTPHP_ENV_PATH" != "$(dirname $(readlink -f $1/*/.virtphp))" ];
+    	then
+        	source $1/*/bin/activate
+        fi
+    else
+    	if [ "$1" == '/' ];
+        then
+        	if [ "$VIRTPHP_ENV_PATH" != '' ];
+            then
+            	deactivate
+            fi
+        else
+        	detectVirtPHP "$(dirname $1)"
+		fi
+    fi
+}
