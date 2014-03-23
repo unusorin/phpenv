@@ -64,6 +64,9 @@ CONFIGURE_OPTIONS="--without-pear \
                    --enable-pcntl \
                    --with-readline \
                    --enable-mbstring \
+                   --enable-fpm \
+                   --with-fpm-user=www-data \
+                   --with-fpm-group=www-data \
                    --disable-debug"
 
 if [ -n "$PHPENV_CONFIGURE_OPTS" ]; then
