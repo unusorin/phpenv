@@ -26,6 +26,9 @@ Because of the simplicity of the shim approach, all you need to use
 phpenv is `~/.phpenv/shims` in your `$PATH`.
 
 ## Installation
+### On-line installation 
+
+  curl -sS https://raw.githubusercontent.com/unusorin/phenv/master/bin/install-debian.sh | bash
 
 ### Basic GitHub Checkout
 

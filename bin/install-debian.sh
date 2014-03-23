@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 echo "Installing required dependencies ... "
 sudo add-apt-repository ppa:ondrej/php5 -y
@@ -22,3 +21,9 @@ else
 		echo "source ~/.phpenv/bin/profile" >> ~/.bashrc
 	fi
 fi
+
+echo "Installing VirtPHP..."
+
+sudo ln -s $(readlink -f ~/.phpenv/bin/virtphp.phar) /usr/local/bin
+
+echo "DONE"
