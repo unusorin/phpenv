@@ -8,7 +8,7 @@ sudo apt-get install  libreadline-dev -y
 
 echo "Installing PHPENV ..."
 
-git clone https://github.com/unusorin/phpenv ~/.phpenv
+echo $(git clone https://github.com/unusorin/phpenv ~/.phpenv)
 
 if [ $? -ne 0 ];
 then
