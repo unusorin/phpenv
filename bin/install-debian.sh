@@ -10,16 +10,11 @@ echo "Installing PHPENV ..."
 
 echo $(git clone https://github.com/unusorin/phpenv ~/.phpenv)
 
-if [ $? -ne 0 ];
+if [ -r ~/.bash_profile ];
 then
-	echo "FAILED TO INSTALL PHPENV"
+	echo "source ~/.phpenv/bin/profile" >> ~/.bash_profile
 else
-	if [ -r ~/.bash_profile ];
-	then
-		echo "source ~/.phpenv/bin/profile" >> ~/.bash_profile
-	else
-		echo "source ~/.phpenv/bin/profile" >> ~/.bashrc
-	fi
+	echo "source ~/.phpenv/bin/profile" >> ~/.bashrc
 fi
 
 echo "Installing VirtPHP..."
