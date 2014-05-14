@@ -40,6 +40,7 @@ CONFIGURE_OPTIONS="--without-pear \
                    --with-png-dir=/usr \
                    --enable-exif \
                    --enable-zip \
+                   --enable-maintainer-zts \
                    --with-zlib \
                    --with-zlib-dir=/usr \
                    --with-kerberos \
